@@ -28,7 +28,7 @@ the network.</h4>
 📚 [Documentation](https://docs.ver.ax/)  
 🔍 [Subgraphs](#subgraphs-addresses)  
 🧱 [Verax SDK](https://www.npmjs.com/package/@verax-attestation-registry/verax-sdk)  
-🌍 Verax Explorer (_Coming soon_)
+🌍 [Explorer](https://explorer.ver.ax)
 
 ## Repository Organisation
 
@@ -42,41 +42,19 @@ the network.</h4>
 ├── website     # Verax landing page and
 ```
 
+Each package has its own README file for more details and installation process description.
+
 ## Getting Started
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/) (>= 18)
 
-### Global installation
+### Global setup
 
 ```bash
 pnpm i
 ```
-
-### Contracts
-
-Check the dedicated [README](./contracts/README.md) for more details.
-
-### Explorer
-
-Check the dedicated [README](./explorer/README.md) for more details.
-
-### SDK
-
-Check the dedicated [README](./sdk/README.md) for more details.
-
-### Snap
-
-Check the dedicated [README](./snap/README.md) for more details.
-
-### Subgraph
-
-Check the dedicated [README](./subgraph/README.md) for more details.
-
-### Website
-
-Check the dedicated [README](./website/README.md) for more details.
 
 ## Contributing
 
@@ -93,11 +71,12 @@ The main contracts (i.e. the "registries") and the helpers contracts are deploye
 - Linea Mainnet
 - Arbitrum Testnet
 - Arbitrum Mainnet
+- Arbitrum Nova
 
 Here are the addresses on those networks:
 
 <details>
-  <summary>Linea Testnet</summary>
+  <summary>Linea Goerli</summary>
 
 - Router =
   [0x736c78b2f2cBf4F921E8551b2acB6A5Edc9177D5](https://goerli.lineascan.build/address/0x736c78b2f2cBf4F921E8551b2acB6A5Edc9177D5)
@@ -111,6 +90,22 @@ Here are the addresses on those networks:
   [0xB2c4Da1f8F08A0CA25862509E5431289BE2b598B](https://goerli.lineascan.build/address/0xB2c4Da1f8F08A0CA25862509E5431289BE2b598B)
 - AttestationReader =
   [0x65c8294C7aF0f0bDDe51eF92AF850613bb629fc6](https://goerli.lineascan.build/address/0x65c8294C7aF0f0bDDe51eF92AF850613bb629fc6)
+
+</details>
+
+<details>
+  <summary>Linea Sepolia</summary>
+
+- Router =
+  [0xAfA952790492DDeB474012cEA12ba34B788ab39F](https://sepolia.lineascan.build/address/0xAfA952790492DDeB474012cEA12ba34B788ab39F)
+- AttestationRegistry =
+  [0xDaf3C3632327343f7df0Baad2dc9144fa4e1001F](https://sepolia.lineascan.build/address/0xDaf3C3632327343f7df0Baad2dc9144fa4e1001F)
+- ModuleRegistry =
+  [0x3C443B9f0c8ed3A3270De7A4815487BA3223C2Fa](https://sepolia.lineascan.build/address/0x3C443B9f0c8ed3A3270De7A4815487BA3223C2Fa)
+- PortalRegistry =
+  [0x506f88a5Ca8D5F001f2909b029738A40042e42a6](https://sepolia.lineascan.build/address/0x506f88a5Ca8D5F001f2909b029738A40042e42a6)
+- SchemaRegistry =
+  [0x90b8542d7288a83EC887229A7C727989C3b56209](https://sepolia.lineascan.build/address/0x90b8542d7288a83EC887229A7C727989C3b56209)
 
 </details>
 
@@ -151,6 +146,24 @@ Here are the addresses on those networks:
 </details>
 
 <details>
+  <summary>Arbitrum Sepolia</summary>
+
+- Router =
+  [0x374B686137eC0DB442a8d833451f8C12cD4B5De4](https://sepolia.arbiscan.io/address/0x374B686137eC0DB442a8d833451f8C12cD4B5De4)
+- AttestationRegistry =
+  [0xee5e23492bf49C1F4CF0676b3bF49d78A6dD61c5](https://sepolia.arbiscan.io/address/0xee5e23492bf49C1F4CF0676b3bF49d78A6dD61c5)
+- ModuleRegistry =
+  [0xEC572277d4E87a64DcfA774ED219Dd4E69E4BDc6](https://sepolia.arbiscan.io/address/0xEC572277d4E87a64DcfA774ED219Dd4E69E4BDc6)
+- PortalRegistry =
+  [0x1ceb52584B6C45C7049dc7fDC476bC138E4beaDE](https://sepolia.arbiscan.io/address/0x1ceb52584B6C45C7049dc7fDC476bC138E4beaDE)
+- SchemaRegistry =
+  [0x025531b655D9EE335B8E6cc4C118b313f26ACc8F](https://sepolia.arbiscan.io/address/0x025531b655D9EE335B8E6cc4C118b313f26ACc8F)
+- AttestationReader =
+  [0xBdC45324AB9A7e82Ae15324a3d8352b513Ee2788](https://sepolia.arbiscan.io/address/0xBdC45324AB9A7e82Ae15324a3d8352b513Ee2788)
+
+</details>
+
+<details>
   <summary>Arbitrum Mainnet</summary>
 
 - Router =
@@ -168,42 +181,83 @@ Here are the addresses on those networks:
 
 </details>
 
+<details>
+  <summary>Arbitrum Nova</summary>
+
+- Router =
+  [0xC81B5149D9Cd49195D00EFb16FED89f3Ba78E03B](https://nova.arbiscan.io/address/0xc81b5149d9cd49195d00efb16fed89f3ba78e03b)
+- AttestationRegistry =
+  [0xB9Cf26ED827Eb4A7079e8dedB0ea93D932A2e3e8](https://nova.arbiscan.io/address/0xB9Cf26ED827Eb4A7079e8dedB0ea93D932A2e3e8)
+- ModuleRegistry =
+  [0x46F7471cd2C1d69Cb5e62c1a34F3fCAf81304Fc3](https://nova.arbiscan.io/address/0x46F7471cd2C1d69Cb5e62c1a34F3fCAf81304Fc3)
+- PortalRegistry =
+  [0xADc8da3d3388dEe74C7134fC4AEe1cF866Da5d38](https://nova.arbiscan.io/address/0xADc8da3d3388dEe74C7134fC4AEe1cF866Da5d38)
+- SchemaRegistry =
+  [0x9b5BABcEbf0E8550da1eCDe5674783179B6557FB](https://nova.arbiscan.io/address/0x9b5BABcEbf0E8550da1eCDe5674783179B6557FB)
+- AttestationReader =
+  [0x7A22D0Fba31a4d5b5E4F5263379B4dbf3707b48c](https://nova.arbiscan.io/address/0x7A22D0Fba31a4d5b5E4F5263379B4dbf3707b48c)
+
+</details>
+<details>
+  <summary>Arbitrum Nova</summary>
+
+- Router =
+  [0xC81B5149D9Cd49195D00EFb16FED89f3Ba78E03B](https://nova.arbiscan.io/address/0xc81b5149d9cd49195d00efb16fed89f3ba78e03b)
+- AttestationRegistry =
+  [0xB9Cf26ED827Eb4A7079e8dedB0ea93D932A2e3e8](https://nova.arbiscan.io/address/0xB9Cf26ED827Eb4A7079e8dedB0ea93D932A2e3e8)
+- ModuleRegistry =
+  [0x46F7471cd2C1d69Cb5e62c1a34F3fCAf81304Fc3](https://nova.arbiscan.io/address/0x46F7471cd2C1d69Cb5e62c1a34F3fCAf81304Fc3)
+- PortalRegistry =
+  [0xADc8da3d3388dEe74C7134fC4AEe1cF866Da5d38](https://nova.arbiscan.io/address/0xADc8da3d3388dEe74C7134fC4AEe1cF866Da5d38)
+- SchemaRegistry =
+  [0x9b5BABcEbf0E8550da1eCDe5674783179B6557FB](https://nova.arbiscan.io/address/0x9b5BABcEbf0E8550da1eCDe5674783179B6557FB)
+- AttestationReader =
+  [0x7A22D0Fba31a4d5b5E4F5263379B4dbf3707b48c](https://nova.arbiscan.io/address/0x7A22D0Fba31a4d5b5E4F5263379B4dbf3707b48c)
+
+</details>
+
+<details>
+  <summary>Base Sepolia</summary>
+
+- Router =
+  [0xE235826514945186227918325D3E5b5f873861A6](https://sepolia.basescan.org/address/0xE235826514945186227918325D3E5b5f873861A6)
+- AttestationRegistry =
+  [0x374B686137eC0DB442a8d833451f8C12cD4B5De4](https://sepolia.basescan.org/address/0x374B686137eC0DB442a8d833451f8C12cD4B5De4)
+- ModuleRegistry =
+  [0xEC572277d4E87a64DcfA774ED219Dd4E69E4BDc6](https://sepolia.basescan.org/address/0xEC572277d4E87a64DcfA774ED219Dd4E69E4BDc6)
+- PortalRegistry =
+  [0x025531b655D9EE335B8E6cc4C118b313f26ACc8F](https://sepolia.basescan.org/address/0x025531b655D9EE335B8E6cc4C118b313f26ACc8F)
+- SchemaRegistry =
+  [0x66D2F3DCc970343b83a6263E20832184fa71CFe7](https://sepolia.basescan.org/address/0x66D2F3DCc970343b83a6263E20832184fa71CFe7)
+
+</details>
+
+<details>
+  <summary>Base Mainnet</summary>
+
+- Router =
+  [0x63b2d528805Fc9373586366705852FA89debd4d0](https://basescan.org/address/0x63b2d528805Fc9373586366705852FA89debd4d0)
+- AttestationRegistry =
+  [0xA0080DBd35711faD39258E45d9A5D798852b05D4](https://basescan.org/address/0xA0080DBd35711faD39258E45d9A5D798852b05D4)
+- ModuleRegistry =
+  [0xAd0C12db58098A6665CBEf48f60eB67d81d1F1ff](https://basescan.org/address/0xAd0C12db58098A6665CBEf48f60eB67d81d1F1ff)
+- PortalRegistry =
+  [0xcbf28432C25B400E645F0EaC05F8954e8EE7c0d6](https://basescan.org/address/0xcbf28432C25B400E645F0EaC05F8954e8EE7c0d6)
+- SchemaRegistry =
+  [0x8081dCd745f160c148Eb5be510F78628A0951c31](https://basescan.org/address/0x8081dCd745f160c148Eb5be510F78628A0951c31)
+
+</details>
+
 ## Subgraphs Addresses
 
-- [Linea Testnet](https://graph-query.goerli.linea.build/subgraphs/name/Consensys/linea-attestation-registry/graphql)
+- [Linea Goerli](https://api.goldsky.com/api/public/project_clqghnrbp9nx201wtgylv8748/subgraphs/verax/subgraph-testnet/gn)
+- [Linea Sepolia](https://api.studio.thegraph.com/query/67521/verax-v1-linea-sepolia/v0.0.1)
 - [Linea Mainnet](https://graph-query.linea.build/subgraphs/name/Consensys/linea-attestation-registry/graphql)
 - [Arbitrum Goerli](https://api.thegraph.com/subgraphs/name/cliqueofficial/verax-arbitrum-goerli)
 - [Arbitrum Mainnet](https://api.thegraph.com/subgraphs/name/cliqueofficial/verax-arbitrum)
-
-## Linking Attestations
-
-Verax Attestation Registry allows creating links ("relationships") between attestations.  
-🔗 Go to the [official documentation](https://docs.ver.ax/developer-guides/for-attestation-issuers/link-attestations)
-for more details
-
-Verax offers 2 Schemas to cover most use cases:
-
-- The **Relationship** Schema, with ID `0x41b8c81288eebbf173b2f54b9fb2f1d37f2caca51ef39e8f99299b53c2599a3a`
-- The **Named Graph Relationship** Schema with ID `0x8f83a0ef7871f63455a506f6bca0db98a88721764ae6dbde2afddd8e12e442b8`
-
-## Off-chain Attestations
-
-To handle large payloads to attest and avoid increasing the gas cost for the attestation process, it is possible to host
-the attested payload off-chain. In this case, the on-chain attestation will only contain a link to the attested payload,
-based on a dedicated Schema called **Offchain**. It is available with ID
-`0xa288e257097a4bed4166c002cb6911713edacc88e30b6cb2b0104df9c365327d`.
-
-To use it, simply pass a payload with the following content:
-
-```json
-{
-  "schemaId": "0x41b8c81288eebbf173b2f54b9fb2f1d37f2caca51ef39e8f99299b53c2599a3b",
-  "uri": "https://example.com/payload/123"
-}
-```
-
-- `schemaId`: the ID of the Schema encoding the complete (off-chain) payload
-- `uri`: the link to the complete (off-chain) payload
+- [Arbitrum Nova](https://api.goldsky.com/api/public/project_clr9aj9alwgwg01q7ci1rh781/subgraphs/verax-arbitrum-nova/0.0.5/gn)
+- [Base Sepolia](https://api.studio.thegraph.com/query/67521/verax-v1-base-sepolia/v0.0.1)
+- [Base Mainnet](https://api.studio.thegraph.com/query/67521/verax-v1-base/v0.0.1)
 
 ## License
 
