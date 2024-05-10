@@ -2,9 +2,14 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+# solc = "0.8.21"
 
 [rpc_endpoints]
 linea_goerli = "${LINEA_GOERLI_RPC_URL}"
+blast = "https://rpc.ankr.com/blast"
+blastTestnet = "https://rpc.ankr.com/blast_testnet_sepolia"
 
 [etherscan]
 linea_goerli = { key = "${ETHERSCAN_API_KEY}" }
+blast = { key = "${BLASTSCAN_API_KEY}" }
+blastTestnet = { key = "${TESTNET_BLASTSCAN_API_KEY}" }

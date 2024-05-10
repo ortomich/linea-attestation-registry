@@ -4,10 +4,15 @@ import { getChainPrefix } from "../utils";
 
 dotenv.config({ path: "../.env" });
 
+const waitSeconds = (seconds: number) => new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+
 async function main() {
   console.log(`START SCRIPT`);
+  await run("clean");
+  await run("compile");
 
-  const easRegistryAddress = process.env.EAS_REGISTRY_ADDRESS;
+  // const easRegistryAddress = process.env.EAS_REGISTRY_ADDRESS;
+  const easRegistryAddress = "0x4200000000000000000000000000000000000021"
 
   console.log("Deploying Router...");
   const Router = await ethers.getContractFactory("Router");
@@ -16,9 +21,8 @@ async function main() {
   const routerProxyAddress = await router.getAddress();
   const routerImplementationAddress = await upgrades.erc1967.getImplementationAddress(routerProxyAddress);
 
-  await run("verify:verify", {
-    address: routerProxyAddress,
-  });
+    // await waitSeconds(10);
+  // await run("verify", {address: routerProxyAddress,});
 
   console.log(`Router successfully deployed and verified!`);
   console.log(`Proxy is at ${routerProxyAddress}`);
@@ -35,9 +39,8 @@ async function main() {
     attestationRegistryProxyAddress,
   );
 
-  await run("verify:verify", {
-    address: attestationRegistryProxyAddress,
-  });
+  //   await waitSeconds(10);
+  // await run("verify", {address: attestationRegistryProxyAddress,});
 
   console.log(`AttestationRegistry successfully deployed and verified!`);
   console.log(`Proxy is at ${attestationRegistryProxyAddress}`);
@@ -54,9 +57,8 @@ async function main() {
     moduleRegistryProxyAddress,
   );
 
-  await run("verify:verify", {
-    address: moduleRegistryProxyAddress,
-  });
+  //   await waitSeconds(10);
+  // await run("verify", {address: moduleRegistryProxyAddress,});
 
   console.log(`ModuleRegistry successfully deployed and verified!`);
   console.log(`Proxy is at ${moduleRegistryProxyAddress}`);
@@ -73,9 +75,8 @@ async function main() {
     portalRegistryProxyAddress,
   );
 
-  await run("verify:verify", {
-    address: portalRegistryProxyAddress,
-  });
+  //   await waitSeconds(10);
+  // await run("verify", {address: portalRegistryProxyAddress,});
 
   console.log(`PortalRegistry successfully deployed and verified!`);
   console.log(`Proxy is at ${portalRegistryProxyAddress}`);
@@ -92,9 +93,8 @@ async function main() {
     schemaRegistryProxyAddress,
   );
 
-  await run("verify:verify", {
-    address: schemaRegistryProxyAddress,
-  });
+  //   await waitSeconds(10);
+  // await run("verify", {address: schemaRegistryProxyAddress,});
 
   console.log(`SchemaRegistry successfully deployed and verified!`);
   console.log(`Proxy is at ${schemaRegistryProxyAddress}`);
@@ -111,9 +111,8 @@ async function main() {
     attestationReaderProxyAddress,
   );
 
-  await run("verify:verify", {
-    address: attestationReaderProxyAddress,
-  });
+  //   await waitSeconds(10);
+  // await run("verify", {address: attestationReaderProxyAddress,});
 
   console.log(`AttestationReader successfully deployed and verified!`);
   console.log(`Proxy is at ${attestationReaderProxyAddress}`);

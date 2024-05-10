@@ -6,6 +6,8 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: "./.env" });
 
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
@@ -42,6 +44,14 @@ const config: HardhatUserConfig = {
       url: "https://sepolia-rpc.scroll.io/",
       accounts: process.env.PRIVATE_KEY_SCROLL_TESTNET !== undefined ? [process.env.PRIVATE_KEY_SCROLL_TESTNET] : [],
     },
+    "blast": {
+      url: "https://rpc.ankr.com/blast",
+      accounts: [PRIVATE_KEY],
+    },
+    "blastTestnet": {
+      url: "https://rpc.ankr.com/blast_testnet_sepolia",
+      accounts: [PRIVATE_KEY],
+    },
   },
   paths: {
     sources: "./src",
@@ -53,6 +63,8 @@ const config: HardhatUserConfig = {
       "linea-goerli": process.env.LINEASCAN_API_KEY ?? "",
       linea: process.env.LINEASCAN_API_KEY ?? "",
       "scroll-sepolia": process.env.SCROLL_API_KEY ?? "",
+      blast_sepolia: process.env.TESTNET_BLASTSCAN_API_KEY ?? "",
+      blast: process.env.BLASTSCAN_API_KEY ?? "",
     },
     customChains: [
       {
@@ -95,6 +107,22 @@ const config: HardhatUserConfig = {
           browserURL: "https://sepolia-blockscout.scroll.io/",
         },
       },
+      {
+        network: "blast_sepolia",
+        chainId: 168587773,
+        urls: {
+          apiURL: "https://sepolia.blastscan.io/",
+          browserURL: "https://testnet.blastscan.io"
+        }
+      },
+      {
+        network: "blast",
+        chainId: 81457,
+        urls: {
+          apiURL: "https://api.blastscan.io/api",
+          browserURL: "https://blastscan.io/"
+        }
+      }
     ],
   },
 };
